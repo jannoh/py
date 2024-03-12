@@ -1,10 +1,13 @@
 #!/usr/bin/python
 
-answer = input('Enter yes/y or no/n: ')
+answer = ''
 
-if answer.lower() == 'yes' or answer.lower() == 'y':
+while len(answer) == 0:
+    answer = input('Enter yes/y or no/n: ').lower()
+
+if answer == 'yes' or answer == 'y':
     print("Agreed")
-elif answer == 'no' or answer.lower() == 'n':
+elif answer == 'no' or answer == 'n':
     print('Disagreed')
 else:
     print('Provided valid input!')
