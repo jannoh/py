@@ -4,11 +4,12 @@ import optparse
 
 parser = optparse.OptionParser()
 parser.add_option('-i', "--interface", dest='interface', help='Interface to change host MAC address')
+parser.add_option('-m', "--mac", dest='new_mac', help='New MAC Address')
 
-parser.parse_args()
+(cli_values, cli_flags) = parser.parse_args()
 
-interface = input('interface::> ')
-new_mac_addr = input('new MAC::> ')
+interface = cli_values.interface
+new_mac_addr = cli_values.new_mac
 
 print(f"[+] Changing MAC Address for {interface} to {new_mac_addr}")
 
