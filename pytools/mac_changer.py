@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import subprocess
 
-interface = 'wlan0'
-new_mac_addr = '00:11:22:33:44:77'
+interface = input('interface::> ')
+new_mac_addr = input('new MAC::> ')
 
 print(f"[+] Changing MAC Address for {interface} to {new_mac_addr}")
 
